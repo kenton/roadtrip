@@ -6,10 +6,6 @@
 
 This is a quick little gem that uses Google Maps to determine the distance, duration and fuel costs for driving between two user defined points.  Just like Google Maps, the starting and destination points can be full addresses, city/state combinations, or just ZIP codes.  
 
-== FEATURES/PROBLEMS:
-
-* (to be added later...)
-
 == SYNOPSIS:
 Assume a user is traveling from ZIP code 30032 to ZIP code 90210, that gas costs $2.75 per gallon and that the car being driven has a fuel economy of 30mpg.  The following would be used to create an instance of a Roadtrip::Trip, labeled "t" in this case:
 
@@ -21,6 +17,8 @@ So in general, the user supplies the following parameters:
 	* Destination
 	* Cost Per Gallon - the cost for a gallon of gas, on average
 	* Miles Per Gallon -  the MPG for your vehicle
+
+== FEATURES:
 
 Each "RoadTrip::Trip" object has the following methods available:
 
