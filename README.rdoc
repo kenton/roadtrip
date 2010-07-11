@@ -23,10 +23,10 @@ The user supplies the following parameters:
 
 Each object has the following methods available:
 
-t.distance
-t.duration
-t.cost
-t.round_trip_cost
+	t.distance
+	t.duration
+	t.cost
+	t.round_trip_cost
   
 
 == REQUIREMENTS:
