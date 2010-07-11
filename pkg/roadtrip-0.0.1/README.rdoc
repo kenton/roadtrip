@@ -11,17 +11,18 @@ This is a quick little gem that uses Google Maps to determine the distance, dura
 * (to be added later...)
 
 == SYNOPSIS:
+Assume a user is traveling from ZIP code 30032 to ZIP code 90210, that gas costs $2.75 per gallon and that the car being driven has a fuel economy of 30mpg.  The following would be used to create an instance of a Roadtrip::Trip, labeled "t" in this case:
 
   t = Roadtrip::Trip.new(30032, 90210, 2.75, 30)
 
-The user supplies the following parameters:
+So in general, the user supplies the following parameters:
 
 	* Starting Location
 	* Destination
 	* Cost Per Gallon - the cost for a gallon of gas, on average
 	* Miles Per Gallon -  the MPG for your vehicle
 
-Each object has the following methods available:
+Each "RoadTrip::Trip" object has the following methods available:
 
 	t.distance
 	t.duration
