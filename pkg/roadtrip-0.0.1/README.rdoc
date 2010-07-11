@@ -1,0 +1,63 @@
+= roadtrip
+
+* http://github.com/#{github_username}/#{project_name}
+
+== DESCRIPTION:
+
+This is a quick little gem that uses Google Maps to determine the distance, duration and fuel costs for driving between two user defined points.  Just like Google Maps, the starting and destination points can be full addresses, city/state combinations, or just ZIP codes.  
+
+== FEATURES/PROBLEMS:
+
+* Pending
+
+== SYNOPSIS:
+
+  t = Roadtrip::Trip.new(30032, 90210, 2.75, 30)
+
+The user supplies the following parameters:
+
+Starting Location
+Destination
+Cost Per Gallon - the cost for a gallon of gas, on average
+Miles Per Gallon -  the MPG for your vehicle
+
+Each object has the following methods available:
+
+	t.distance
+	t.duration
+	t.cost
+	t.round_trip_cost
+  
+
+== REQUIREMENTS:
+
+* FIX (list of requirements)
+
+== INSTALL:
+
+sudo gem install roadtrip
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2010 Kenton Newby
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
