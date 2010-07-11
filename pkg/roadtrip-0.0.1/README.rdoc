@@ -40,6 +40,8 @@ This gem has the following dependencies:
 
 (sudo) gem install roadtrip
 
+Note: This gem is hosted at http://www.rubygems.org.  Be sure you have rubygems.org (or gemcutter.org) listed as a gem source on your system...or see the documentation on their site for how to add this as a source.
+
 == LICENSE:
 
 (The MIT License)
