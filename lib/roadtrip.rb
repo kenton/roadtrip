@@ -7,7 +7,7 @@ require 'pp'
 require 'ap'
 
 module Roadtrip
-  VERSION = '0.0.1'
+  VERSION = '0.0.2'
   
   dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
 
