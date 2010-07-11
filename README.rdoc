@@ -28,8 +28,10 @@ Each "RoadTrip::Trip" object has the following methods available:
 	t.duration
 	t.cost
 	t.round_trip_cost
-  
 
+== TESTS:
+This is a brand new gem (and my first), so I'm still working through adding Cucumber/RSpec tests.  For now, this was just a proof of concept so I knew how to create/deploy a gem.  I plan on going back and continuing development of this gem using BDD/TDD.  More to follow...
+  
 == REQUIREMENTS:
 This gem has the following dependencies:
 
