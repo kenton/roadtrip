@@ -1,0 +1,4 @@
+.DS_Store
+coverage/*
+coverage.data
+autotest_images

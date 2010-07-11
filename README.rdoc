@@ -1,6 +1,6 @@
 = roadtrip
 
-* http://github.com/#{github_username}/#{project_name}
+* http://github.com/kenton/roadtrip
 
 == DESCRIPTION:
 
@@ -8,7 +8,7 @@ This is a quick little gem that uses Google Maps to determine the distance, dura
 
 == FEATURES/PROBLEMS:
 
-* Pending
+* (to be added later...)
 
 == SYNOPSIS:
 
@@ -16,26 +16,28 @@ This is a quick little gem that uses Google Maps to determine the distance, dura
 
 The user supplies the following parameters:
 
-Starting Location
-Destination
-Cost Per Gallon - the cost for a gallon of gas, on average
-Miles Per Gallon -  the MPG for your vehicle
+	* Starting Location
+	* Destination
+	* Cost Per Gallon - the cost for a gallon of gas, on average
+	* Miles Per Gallon -  the MPG for your vehicle
 
 Each object has the following methods available:
 
-	t.distance
-	t.duration
-	t.cost
-	t.round_trip_cost
+t.distance
+t.duration
+t.cost
+t.round_trip_cost
   
 
 == REQUIREMENTS:
+This gem has the following dependencies:
 
-* FIX (list of requirements)
+* rubygems (of course)
+* httparty (http://github.com/jnunemaker/httparty)
 
 == INSTALL:
 
-sudo gem install roadtrip
+(sudo) gem install roadtrip
 
 == LICENSE:
 
