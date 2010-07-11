@@ -6,7 +6,7 @@
 
 This is a quick little gem that uses Google Maps to determine the distance, duration and fuel costs for driving between two user defined points.  Just like Google Maps, the starting and destination points can be full addresses, city/state combinations, or just ZIP codes.  
 
-== SYNOPSIS:
+== EXAMPLE USE:
 Assume a user is traveling from ZIP code 30032 to ZIP code 90210, that gas costs $2.75 per gallon and that the car being driven has a fuel economy of 30mpg.  The following would be used to create an instance of a Roadtrip::Trip, labeled "t" in this case:
 
   t = Roadtrip::Trip.new(30032, 90210, 2.75, 30)
@@ -39,6 +39,10 @@ This gem has the following dependencies:
 == INSTALL:
 
 (sudo) gem install roadtrip
+
+Then in your ruby code, add:
+require 'rubygems'
+require 'roadtrip'
 
 Note: This gem is hosted at http://www.rubygems.org.  Be sure you have rubygems.org (or gemcutter.org) listed as a gem source on your system...or see the documentation on their site for how to add this as a source.
 
