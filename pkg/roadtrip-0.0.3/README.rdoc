@@ -1,0 +1,72 @@
+= roadtrip
+
+* http://github.com/kenton/roadtrip
+
+== DESCRIPTION:
+
+This is a quick little gem that uses Google Maps to determine the distance, duration and fuel costs for driving between two user defined points.  Just like Google Maps, the starting and destination points can be full addresses, city/state combinations, or just ZIP codes.  
+
+== EXAMPLE USE:
+Assume a user is traveling from ZIP code 30032 to ZIP code 90210, that gas costs $2.75 per gallon and that the car being driven has a fuel economy of 30mpg.  The following would be used to create an instance of a Roadtrip::Trip, labeled "t" in this case:
+
+  t = Roadtrip::Trip.new(30032, 90210, 2.75, 30)
+
+So in general, the user supplies the following parameters:
+
+	* Starting Location
+	* Destination
+	* Cost Per Gallon - the cost for a gallon of gas, on average
+	* Miles Per Gallon -  the MPG for your vehicle
+
+== FEATURES:
+
+Each "RoadTrip::Trip" object has the following methods available:
+
+	t.distance
+	t.duration
+	t.cost
+	t.round_trip_cost
+
+== TESTS:
+This is a brand new gem (and my first), so I'm still working through adding Cucumber/RSpec tests.  For now, this was just a proof of concept so I knew how to create/deploy a gem.  I plan on going back and continuing development of this gem using BDD/TDD.  More to follow...
+  
+== REQUIREMENTS:
+This gem has the following dependencies:
+
+* rubygems (of course)
+* httparty (http://github.com/jnunemaker/httparty)
+
+== INSTALL:
+
+(sudo) gem install roadtrip
+
+Then in your ruby code, add:
+require 'rubygems'
+require 'roadtrip'
+
+Note: This gem is hosted at http://www.rubygems.org.  Be sure you have rubygems.org (or gemcutter.org) listed as a gem source on your system...or see the documentation on their site for how to add this as a source.
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2010 Kenton Newby
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
