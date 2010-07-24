@@ -8,9 +8,9 @@ require 'ap'
 
 module Roadtrip
   VERSION = '0.0.3'
-  
-  dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
+  MILES_PER_METER = 0.000621371192
 
+  dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
 
   class Trip
     include HTTParty
@@ -24,41 +24,30 @@ module Roadtrip
       @cost_per_gallon = cost_per_gallon
       @mpg = mpg
     end
-    
+
+    def trip
+      Trip.get('http://maps.google.com/maps/api/directions/json?',
+               :query => {
+                 :origin  => self.start,
+                 :destination   => self.destination,
+                 :sensor => "false"
+               })
+    end
+
     def distance
-      trip = Trip.get('http://maps.google.com/maps/api/directions/json?',
-      :query => {
-        :origin  => self.start,
-        :destination   => self.destination,
-        :sensor => "false"
-      })
-      
       trip["routes"][0]["legs"][0]["distance"]["text"]
     end
-    
+
     def duration
-      trip = Trip.get('http://maps.google.com/maps/api/directions/json?',
-      :query => {
-        :origin  => self.start,
-        :destination   => self.destination,
-        :sensor => "false"
-      })
-      
       trip["routes"][0]["legs"][0]["duration"]["text"]
     end
-    
+
+    def distance_in_miles
+      MILES_PER_METER * trip["routes"][0]["legs"][0]["distance"]["value"]
+    end
+
     def cost
-      trip = Trip.get('http://maps.google.com/maps/api/directions/json?',
-      :query => {
-        :origin  => self.start,
-        :destination   => self.destination,
-        :sensor => "false"
-      })
-      
-      distance = trip["routes"][0]["legs"][0]["distance"]["value"]
-      miles = distance * 0.000621371192
-      cost = (self.cost_per_gallon / mpg) * miles
-      return cost
+      distance_in_miles * self.cost_per_gallon / mpg
     end
     
     def round_trip_cost
