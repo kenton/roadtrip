@@ -4,7 +4,7 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 # http://rspec.info/
 describe "Place your specs here" do
   
-  it "should find the round trip cost for the roadtrip" do
+  it "should find the round trip cost for the roadtrip"
 
   it "should find the distance between the starting point and the end point" do
     # violated "Be sure to write your specs"
