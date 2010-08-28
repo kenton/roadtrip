@@ -4,7 +4,7 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 # http://rspec.info/
 describe "Place your specs here" do
   
-  it "find this spec in spec directory" do
+  it "should find the round trip cost for the roadtrip" do
     # violated "Be sure to write your specs"
   end
   
