@@ -72,6 +72,8 @@ Gem::Specification.new do |s|
      "pkg/roadtrip-0.0.3/spec/spec.opts",
      "pkg/roadtrip-0.0.3/spec/spec_helper.rb",
      "pkg/roadtrip-0.0.3/tasks/rspec.rake",
+     "pkg/roadtrip-0.1.0.gem",
+     "roadtrip.gemspec",
      "script/console",
      "script/destroy",
      "script/generate",
