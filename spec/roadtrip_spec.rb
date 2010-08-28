@@ -12,4 +12,6 @@ describe "Place your specs here" do
   
   it "should find the duration of the roadtrip"
   
+  it "should show a map of the roadtrip route"
+  
 end
