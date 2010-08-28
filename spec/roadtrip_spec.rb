@@ -10,7 +10,7 @@ describe "Place your specs here" do
     # violated "Be sure to write your specs"
   end
   
-  it "should calculate the cost of the roadtip"
+  it "should calculate the cost of the roadtrip"
   
   it "should find the duration of the roadtrip"
   
