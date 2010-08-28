@@ -7,7 +7,6 @@ require 'pp'
 require 'ap'
 
 module Roadtrip
-  VERSION = '0.0.4'
   MILES_PER_METER = 0.000621371192
 
   dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
