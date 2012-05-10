@@ -2,8 +2,9 @@ require_relative '../../../lib/roadtrip/trip'
 require 'awesome_print'
 
 describe RoadTrip::Trip do
+  let(:trip) { RoadTrip::Trip.new(:from => "20910", :to => "30032", :cost_per_gallon => 3.95, :vehicle => stub) }
+
   describe "initialize", :vcr do
-    let(:trip) { RoadTrip::Trip.new(:from => "20910", :to => "30032", :cost_per_gallon => 3.95, :vehicle => stub) }
 
     it "sets a starting point" do
       trip.from.should == "20910"
@@ -29,8 +30,17 @@ describe RoadTrip::Trip do
     end
   end
 
-  # describe "#round_trip" do
-  #   let(:trip) { RoadTrip::Trip.new(:from => "20910", :to => "30032", :cost_per_gallon => 3.95, :vehicle => stub) }
+  describe "#distance_in_miles", :vcr do
+    it "returns the one-way distance from starting point to destination" do
+      trip.distance_in_miles.should == 650.0
+    end
+  end
+
+  describe "#duration", :vcr do
+    it "returns the duration of the trip from starting point to destination" do
+      trip.duration.should == "11 hours 11 mins"
+    end
+  end
 
   #   it "calculates the round trip cost for a trip" do
   #     trip.round_trip.should == 100.0
