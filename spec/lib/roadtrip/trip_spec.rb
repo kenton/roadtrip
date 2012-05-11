@@ -1,4 +1,5 @@
 require_relative '../../../lib/roadtrip/trip'
+require 'spec_helper'
 require 'awesome_print'
 
 describe RoadTrip::Trip do

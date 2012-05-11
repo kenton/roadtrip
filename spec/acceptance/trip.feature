@@ -1,4 +1,4 @@
-Feature: Get details for a road trip
+Feature: RoadTrip::Trip Feature
   Background:
 
   Scenario: making a new trip
