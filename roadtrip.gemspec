@@ -19,6 +19,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "httparty",    "~> 0.8.3"
 	gem.add_dependency "rubyXL",      "~> 1.2.7"
 	gem.add_dependency "rubyzip",     "~> 0.9.8"
+	gem.add_dependency "nokogiri",    "~> 1.5.2"
 
   gem.add_development_dependency "rspec",         "~> 2.10.0"
   gem.add_development_dependency "simplecov",     "~> 0.6.4"
