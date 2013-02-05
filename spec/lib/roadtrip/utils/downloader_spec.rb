@@ -4,9 +4,9 @@ describe RoadTrip::Downloader do
   let(:source_url) { 'http://www.fueleconomy.gov/feg/epadata/' }
   let(:downloader) { RoadTrip::Downloader.new(:url => source_url) }
 
-  after :each do
-    Dir.glob("lib/roadtrip/utils/data/*.zip") { |f| File.delete(f) }
-  end
+  #after :each do
+    #Dir.glob("lib/roadtrip/utils/data/*.zip") { |f| File.delete(f) }
+  #end
 
   describe "#initialize" do
     it "creates a new downloader with a given base URL" do
