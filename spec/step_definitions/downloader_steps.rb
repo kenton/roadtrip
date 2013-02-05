@@ -9,4 +9,8 @@ steps_for :downloader do
     end
   end
 
+  step "there should be a new file for that year's data" do
+    File.exist? "lib/roadtrip/utils/data/2013-fuel-economy.zip"
+  end
+
 end

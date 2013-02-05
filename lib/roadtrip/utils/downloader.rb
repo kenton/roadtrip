@@ -14,7 +14,7 @@ module RoadTrip
     def get(year)
       prefix = year.to_s.split("")[2..3].join
       remote_url = url + prefix + 'data.zip'
-		  filename = "#{year}-fuel-economy.zip"
+      filename = "#{year}-fuel-economy.zip"
       filepath = File.join("lib/roadtrip/utils/data", filename)
 
       File.open(filepath, 'wb') do |local_file|
