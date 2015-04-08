@@ -9,7 +9,7 @@ describe RoadTrip::XLSParser do
   describe "#parse" do
     it "parses an .xlsx file" do
       parser = RoadTrip::XLSParser.new("spec/data/2012.xlsx")
-      parser.should be
+      expect(parser).to be_present
     end
 
     # think about whether this stuff needs to be in XLSParser or Vehicle
@@ -17,8 +17,8 @@ describe RoadTrip::XLSParser do
 
     it "returns a hash of all vehicle makes and models" do
       parser = RoadTrip::XLSParser.new("spec/data/2012.xlsx")
-      parser.to_hash.should == output_hash
-        
+      expect(parser.to_hash).to eq output_hash
+
     end
 
     # want something that looks like this:

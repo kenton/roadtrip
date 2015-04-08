@@ -15,17 +15,18 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Roadtrip::VERSION
 
-  gem.add_dependency "archive-zip", "~> 0.5.0"
-  gem.add_dependency "httparty",    "~> 0.8.3"
+  gem.add_dependency "archive-zip", "~> 0.7.0"
+  gem.add_dependency "httparty",    "~> 0.13.0"
 	gem.add_dependency "rubyXL",      "~> 1.2.7"
 	gem.add_dependency "rubyzip",     "~> 0.9.8"
-	gem.add_dependency "nokogiri",    "~> 1.5.2"
+  gem.add_dependency "nokogiri",    "~> 1.6.0"
 
-  gem.add_development_dependency "rspec",         "~> 2.10.0"
-  gem.add_development_dependency "simplecov",     "~> 0.6.4"
-  gem.add_development_dependency "turnip",        "~> 0.3.1"
-  gem.add_development_dependency "vcr",           "~> 2.1.1"
-  gem.add_development_dependency "fakeweb",       "~> 1.3.0"
-  gem.add_development_dependency "awesome_print", "~> 1.0.2"
+  gem.add_development_dependency "rspec",         "~> 3.2.0"
+  gem.add_development_dependency "simplecov",     "~> 0.9.0"
+  gem.add_development_dependency "turnip",        "~> 1.2.0"
+  gem.add_development_dependency "vcr",           "~> 2.9.0"
+  gem.add_development_dependency "webmock",       "~> 1.21.0"
+  gem.add_development_dependency "awesome_print", "~> 1.6.0"
+  gem.add_development_dependency "rake",          "~> 10.4.0"
 
 end

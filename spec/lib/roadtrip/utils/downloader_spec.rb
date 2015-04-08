@@ -10,14 +10,14 @@ describe RoadTrip::Downloader do
 
   describe "#initialize" do
     it "creates a new downloader with a given base URL" do
-      downloader.url.should == source_url
+      expect(downloader.url).to eq source_url
     end
   end
 
   describe "#get", :vcr do
     it "downloads the data file for the specified year" do
       downloader.get(2012)
-      File.exists?("lib/roadtrip/utils/data/2012-fuel-economy.zip").should be_true
+      expect(File.exists?("lib/roadtrip/utils/data/2012-fuel-economy.zip")).to be_true
     end
   end
 end
