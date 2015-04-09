@@ -1,3 +1,4 @@
+require 'spec_helper'
 require_relative '../../../../lib/roadtrip/utils/xls_parser'
 
 describe RoadTrip::XLSParser do
@@ -9,7 +10,7 @@ describe RoadTrip::XLSParser do
   describe "#parse" do
     it "parses an .xlsx file" do
       parser = RoadTrip::XLSParser.new("spec/data/2012.xlsx")
-      expect(parser).to be_present
+      expect(parser).to be
     end
 
     # think about whether this stuff needs to be in XLSParser or Vehicle

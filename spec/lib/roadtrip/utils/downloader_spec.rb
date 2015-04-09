@@ -1,3 +1,4 @@
+require 'spec_helper'
 require_relative '../../../../lib/roadtrip/utils/downloader'
 
 describe RoadTrip::Downloader do
@@ -17,7 +18,7 @@ describe RoadTrip::Downloader do
   describe "#get", :vcr do
     it "downloads the data file for the specified year" do
       downloader.get(2012)
-      expect(File.exists?("lib/roadtrip/utils/data/2012-fuel-economy.zip")).to be_true
+      expect(File.exists?("lib/roadtrip/utils/data/2012-fuel-economy.zip")).to eq true
     end
   end
 end

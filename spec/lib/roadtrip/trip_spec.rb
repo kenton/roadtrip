@@ -3,43 +3,43 @@ require 'spec_helper'
 require 'awesome_print'
 
 describe RoadTrip::Trip do
-  let(:trip) { RoadTrip::Trip.new(:from => "20910", :to => "30032", :cost_per_gallon => 3.95, :vehicle => stub) }
+  let(:trip) { RoadTrip::Trip.new(from: "20910", to: "30032", cost_per_gallon: 3.95, vehicle: double) }
 
   describe "initialize", :vcr do
 
     it "sets a starting point" do
-      trip.from.should == "20910"
+      expect(trip.from).to eq "20910"
     end
 
     it "sets an ending point" do
-      trip.to.should == "30032"
+      expect(trip.to).to eq "30032"
     end
 
     it "sets a cost per gallon" do
-      trip.cost_per_gallon.should == 3.95
+      expect(trip.cost_per_gallon).to eq 3.95
     end
 
     it "sets a vehicle" do
-      trip.vehicle.should be
+      expect(trip.vehicle).to be
     end
 
     it "gets the directions from the starting point to the ending point" do
       # for debugging so I can see response as part of test run
       #ap trip.directions["routes"][0]
-      trip.directions["routes"][0]["legs"][0]["start_address"].should == "Silver Spring, MD 20910, USA"
-      trip.directions["routes"][0]["legs"][0]["end_address"].should == "Decatur, GA 30032, USA"
+      expect(trip.directions["routes"][0]["legs"][0]["start_address"]).to eq "Silver Spring, MD 20910, USA"
+      expect(trip.directions["routes"][0]["legs"][0]["end_address"]).to eq "Decatur, GA 30032, USA"
     end
   end
 
   describe "#distance_in_miles", :vcr do
     it "returns the one-way distance from starting point to destination" do
-      trip.distance_in_miles.should == 650.0
+      expect(trip.distance_in_miles).to eq 650.0
     end
   end
 
   describe "#duration", :vcr do
     it "returns the duration of the trip from starting point to destination" do
-      trip.duration.should == "11 hours 11 mins"
+      expect(trip.duration).to eq "9 hours 37 mins"
     end
   end
 
